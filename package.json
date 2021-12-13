@@ -1,0 +1,21 @@
+{
+    "name": "it-studio",
+    "version": "1.0.0",
+    "author": "JuliaSokolenko",
+    "license": "MIT",
+    "scripts": {
+        "build": "parcel build src/pug/index.pug",
+        "start": "parcel serve src/pug/index.pug"
+    },
+    "devDependencies": {
+        "@parcel/transformer-image": "^2.0.1",
+        "@parcel/transformer-pug": "^2.0.1",
+        "@parcel/transformer-sass": "^2.0.1",
+        "@prettier/plugin-pug": "^1.19.0",
+        "autoprefixer": "^10.4.0",
+        "parcel": "^2.0.1",
+        "postcss-modules": "^4.2.2",
+        "prettier": "^2.5.1",
+        "sass": "^1.45.0"
+    }
+}
