@@ -1,0 +1,14 @@
+-
+    const main = {
+        subtitle: 'Передовая IT студия',
+        title: 'Мы создаем легкие решения сложных задач и проблем',
+        buttonPath: '#our projects',
+        buttonTitle: 'Наши проекты'
+    }
+
+section#main.first-screen
+    include ./header.pug
+    .first-screen__container
+        p.first-screen__subtitle #{ main.subtitle }
+        h1.first-screen__title #{ main.title }
+        a.button.first-screen__button(href=main.buttonPath) #{ main.buttonTitle }

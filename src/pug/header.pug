@@ -1,0 +1,29 @@
+-
+    const menuItems = [
+        {
+            path: "#main",
+            name: "Главная"
+        }, 
+        {
+            path: '#projects',
+            name: 'Наши проекты'
+        },
+        {
+            path: '#services',
+            name: 'Услуги'
+        },
+        {
+            path: '#news',
+            name: 'Новости'
+        },
+        {
+            path: '#contacts',
+            name: 'Контакты'
+        }
+    ];
+
+header.header 
+    .header__container
+        nav.nav
+            each item in menuItems
+                a.nav__link(href=item.path) #{ item.name }
