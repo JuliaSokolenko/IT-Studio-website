@@ -1,0 +1,29 @@
+@mixin transition-prefixes {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+@mixin gradient-prefixes {
+    background-image: -moz-linear-gradient(
+        0deg,
+        rgba(5, 4, 4, 0.6),
+        rgba(8, 7, 7, 0.26)
+    );
+    background-image: -webkit-linear-gradient(
+        0deg,
+        rgba(5, 4, 4, 0.6),
+        rgba(8, 7, 7, 0.26)
+    );
+    background-image: -o-linear-gradient(
+        0deg,
+        rgba(5, 4, 4, 0.6),
+        rgba(8, 7, 7, 0.26)
+    );
+    background-image: linear-gradient(
+        0deg,
+        rgba(5, 4, 4, 0.6),
+        rgba(8, 7, 7, 0.26)
+    );
+}
