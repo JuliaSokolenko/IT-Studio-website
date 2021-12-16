@@ -1,0 +1,41 @@
+-
+    const serviceData = {
+        title: "Мы создаем мобильные приложения для крупных корпораций",
+        description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
+        buttonTitle: "Все услуги",
+        buttonPath: "#all-services",
+        content: [
+            { 
+                iconSrc: '../assets/images/project.svg', 
+                altIcon: 'project',
+                title: 'Создание сайтов', 
+                description: 'Lorem Ipsum - это текст-"рыба", часто используе в печати и вэб-дизайне.'
+            },
+            { 
+                iconSrc: '../assets/images/project.svg', 
+                altIcon: 'project',
+                title: 'Создание сайтов', 
+                description: 'Lorem Ipsum - это текст-"рыба", часто используе в печати и вэб-дизайне.'
+            },
+            { 
+                iconSrc: '../assets/images/project.svg', 
+                altIcon: 'project',
+                title: 'Создание сайтов', 
+                description: 'Lorem Ipsum - это текст-"рыба", часто используе в печати и вэб-дизайне.'
+            },
+        ],
+    };
+
+section#projects.services
+    .services__container
+        .services__text-wrap
+            h2.services__title.title= serviceData.title
+            p.services__text.text= serviceData.description
+        ul.services__content
+            each item in serviceData.content
+                li.services__item
+                    img.services__icon(src=item.iconSrc, alt=item.altIcon)
+                    .services__info
+                        h3.services__heading.heading #{ item.title }
+                        p.services__description #{ item.description }
+        a.services__button.button(href=serviceData.buttonPath) #{ serviceData.buttonTitle }

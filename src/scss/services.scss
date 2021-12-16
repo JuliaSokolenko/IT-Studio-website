@@ -1,0 +1,46 @@
+.services {
+    padding: 110px 0 105px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &__text-wrap {
+        width: 100%;
+        max-width: 740px;
+        margin: 0 auto 70px;
+    }
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+        color: $darkgrey;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__content {
+        display: flex;
+        margin-bottom: 55px;
+    }
+    &__item {
+        display: flex;
+        align-items: baseline;
+        margin: 13px;
+    }
+    &__info {
+        margin-left: 17px;
+    }
+    &__heading {
+        margin-bottom: 12px;
+    }
+    &__description {
+        font-family: $font-main;
+        font-size: 14px;
+        line-height: 1.6;
+
+        color: $grey;
+    }
+}
