@@ -1,0 +1,61 @@
+-
+    const aboutUsData= {
+        title: "Высокие стандарты разработки",
+        description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. стандартной "рыбой" для текстов на латинице с начала XVI века. ',
+        link: '#about-company',
+        linkTitle: "Подробнее о компании",
+        imageSrc: '../assets/images/work.png',
+        imageAlt: 'work',
+        projects: [
+            {
+                iconSrc: '../assets/images/web-programming.svg',
+                altIcon: 'web-programming',
+                number: '125',
+                caption: 'Our projects'
+            },
+            {
+                iconSrc: '../assets/images/web-programming.svg',
+                altIcon: 'web-programming',
+                number: '125',
+                caption: 'Our projects'
+            },
+            {
+                iconSrc: '../assets/images/web-programming.svg',
+                altIcon: 'web-programming',
+                number: '125',
+                caption: 'Our projects'
+            },
+            {
+                iconSrc: '../assets/images/web-programming.svg',
+                altIcon: 'web-programming',
+                number: '125',
+                caption: 'Our projects'
+            },
+            {
+                iconSrc: '../assets/images/web-programming.svg',
+                altIcon: 'web-programming',
+                number: '125',
+                caption: 'Our projects'
+            },
+        ],   
+    };
+
+
+section#services.about-us 
+    .about-us__container 
+        article.about-us__description
+            .about-us__text-wrap 
+                h2.about-us__title.title= aboutUsData.title
+                p.about-us__text.text= aboutUsData.description
+                a.about-us__link(href=aboutUsData.link) #{ aboutUsData.linkTitle }
+            img.about-us__image(
+                src=aboutUsData.imageSrc,
+                alt=aboutUsData.imageAlt
+            )
+        ul.about-us__projects 
+            each item in aboutUsData.projects 
+                li.about-us__item 
+                    .about-us__info
+                        img.about-us__icon(src=item.iconSrc, alt=item.altIcon)
+                        p.about-us__number #{ item.number }
+                    p.about-us__caption.text #{ item.caption }
