@@ -1,0 +1,54 @@
+-
+    const allServicesData= {
+        title: 'Наши работы, на которых мы специализируемся',
+        buttonTitle: 'Все услуги',
+        buttonPath: '#all-services',
+        content: [
+            {
+                imageSrc: '../assets/images/team-work.png',
+                imageAlt: 'team-work',
+                number: '01.',
+                heading: 'Исследование и упаковка',
+                description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
+                link: '#read-more',
+                linkTitle: 'Подробнее',
+            },
+            {
+                imageSrc: '../assets/images/team-work.png',
+                imageAlt: 'team-work',
+                number: '02.',
+                heading: 'Исследование и упаковка',
+                description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
+                link: '#read-more',
+                linkTitle: 'Подробнее',
+            },
+            {
+                imageSrc: '../assets/images/team-work.png',
+                imageAlt: 'team-work',
+                number: '03.',
+                heading: 'Исследование и упаковка',
+                description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
+                link: '#read-more',
+                linkTitle: 'Подробнее',
+            },
+        ],
+    };
+
+
+section#news.all-services
+    .all-services__container
+        article.all-services__text-wrap
+            h2.all-services__title.title= allServicesData.title
+            a.all-services__button.button(href=allServicesData.buttonPath) #{ allServicesData.buttonTitle }
+        ul.all-services__content 
+            each item in allServicesData.content 
+                li.all-services__item
+                    img.all-services__image(
+                        src=item.imageSrc,
+                        alt=item.imageAlt
+                    )
+                    h3.all-services__heading.heading
+                        span.all-services__number #{ item.number }
+                        | #{ item.heading }
+                    p.all-services__text.text= item.description
+                    a.all-services__link(href=item.link) #{ item.linkTitle }
