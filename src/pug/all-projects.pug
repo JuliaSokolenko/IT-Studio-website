@@ -1,0 +1,37 @@
+-
+    const projectsData = {
+        title: 'Наши проекты',
+        text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. ',
+        images: [
+           {
+                imgSrc:'../assets/images/project-img.png',
+                altImg: 'project 1',
+           }, 
+           {
+                imgSrc:'../assets/images/project-img.png',
+                altImg: 'project 2',
+           }, 
+           {
+                imgSrc:'../assets/images/project-img.png',
+                altImg: 'project 3',
+           }, 
+           {
+                imgSrc:'../assets/images/project-img.png',
+                altImg: 'project 4',
+           }, 
+        ],
+        buttonTitle: 'Все проекты',
+        buttonPath: '#all-projects',
+    };
+
+
+section.all-projects 
+    .all-projects__container 
+        article.all-projects__text-wrap 
+            h2.all-projects__title.title= projectsData.title
+            p.all-projects__text.text= projectsData.text
+        ul.all-projects__content 
+            each item in projectsData.images 
+                li.all-projects__item
+                    img.all-projects__img(src=item.imgSrc, alt=item.altImg)
+        a.all-projects__button.button(href=projectsData.buttonPath) #{ projectsData.buttonTitle }
