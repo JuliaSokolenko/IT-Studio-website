@@ -1,0 +1,33 @@
+-
+    const workData = {
+        title: 'Видео о нашей работе',
+        subtitle: 'Просто посмотрите, как мы работаем',
+        videoSrc: '../assets/videos/The_Web_Development_Process.mp4',
+        posterSrc: '../assets/images/poster.png',
+        heading: 'Подпишитесь на нашу рассылку',
+        text: 'Полезные статьи, акции, новости - получите все это сейчас!',
+        placeholder: 'Ваш e-mail',
+        buttonTitle: 'Подписаться',
+        caption: 'Мы не шлем спам, и передаем никому ваши данные.'
+    }
+
+section.about-work 
+    .about-work__container
+        article.about-work__content
+            h2.about-work__title.title= workData.title
+            p.about-work__subtitle.text= workData.subtitle
+            video.about-work__video(
+                src=workData.videoSrc,
+                controls,
+                poster=workData.posterSrc
+            )
+        article.about-work__subscription 
+            h3.about-work__heading.heading= workData.heading
+            p.about-work__text.text= workData.text
+            form.about-work__form
+                input.about-work__input(
+                    type='email',
+                    placeholder=workData.placeholder
+                )
+                button.about-work__button.button(type='submit')= workData.buttonTitle
+            p.about-work__caption= workData.caption
