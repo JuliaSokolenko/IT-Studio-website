@@ -1,0 +1,59 @@
+.footer {
+    padding: 70px 0 30px;
+    background-color: $ghostWhite;
+    &__container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 70px;
+        border-bottom: 1px solid $lightgrey;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__heading {
+        margin-bottom: 35px;
+    }
+    &__icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 20px;
+    }
+    &__link {
+        font-family: $font-main;
+        font-size: 14px;
+        line-height: 1.6;
+
+        color: $grey;
+        &:hover {
+            color: darken($grey, 20%);
+        }
+    }
+    &__copyright {
+        padding-top: 30px;
+        &-text {
+            font-family: $font-main;
+            font-size: 13px;
+            line-height: 1.6;
+            text-align: center;
+
+            color: $grey;
+        }
+    }
+}
