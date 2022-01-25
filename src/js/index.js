@@ -41,7 +41,31 @@ const handleHeaderFill = () => {
     })
 }
 
+const button = document.querySelector('.header__burger')
+const nav = document.querySelector('.nav')
+const burgerMenu = document.querySelector('.header__burger-layers')
+
+const handleToggleBurgerMenu = () => {
+    button.addEventListener('click', (event) =>{
+        event.preventDefault()
+        nav.classList.toggle('nav--visible')
+        burgerMenu.classList.toggle('header__burger-layers--cross')
+    })
+}    
+
+const handleCloseBurgerMenu = () => {
+    document.addEventListener('click', (event) =>{
+        const target = event.target;
+        if(target !== button) {
+            nav.classList.remove('nav--visible')
+            burgerMenu.classList.remove('header__burger-layers--cross')
+        }
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     handleNavigation()
     handleHeaderFill()
+    handleToggleBurgerMenu()
+    handleCloseBurgerMenu()
 })
