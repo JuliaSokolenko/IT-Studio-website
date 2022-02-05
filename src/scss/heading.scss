@@ -6,3 +6,9 @@
 
     color: $black;
 }
+
+@media (max-width: 767px) {
+    .heading {
+        font-size: 15px;
+    }
+}

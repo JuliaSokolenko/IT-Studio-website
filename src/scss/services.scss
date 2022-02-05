@@ -44,3 +44,42 @@
         color: $grey;
     }
 }
+
+@media (max-width: 767px) {
+    .services {
+        padding: 70px 0 70px;
+        &__text-wrap {
+            margin-bottom: 35px;
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__content {
+            flex-direction: column;
+            margin-bottom: 35px;
+        }
+        &__item {
+            flex-direction: column;
+            align-items: unset;
+        }
+        &__info {
+            margin-left: 0;
+            text-align: center;
+        }
+        &__description {
+            font-size: 12px;
+        }
+        &__icon {
+            max-width: 110px;
+            margin: 0 auto 10px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .services {
+        &__description {
+            font-size: 10px;
+        }
+    }
+}
