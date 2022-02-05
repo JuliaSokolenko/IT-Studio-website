@@ -3,7 +3,7 @@
         title: "Мы создаем мобильные приложения для крупных корпораций",
         description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
         buttonTitle: "Все услуги",
-        buttonPath: "#all-services",
+        buttonAnchor: "#all-services",
         content: [
             { 
                 iconSrc: '../assets/images/project.svg', 
@@ -38,4 +38,4 @@ section#projects.services
                     .services__info
                         h3.services__heading.heading #{ item.title }
                         p.services__description #{ item.description }
-        a.services__button.button(href=serviceData.buttonPath) #{ serviceData.buttonTitle }
+        a.services__button.button(href=serviceData.buttonAnchor) #{ serviceData.buttonTitle }

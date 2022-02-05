@@ -4,3 +4,15 @@
     font-size: 36px;
     line-height: 1.5;
 }
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .title {
+        font-size: 20px;
+    }
+}
