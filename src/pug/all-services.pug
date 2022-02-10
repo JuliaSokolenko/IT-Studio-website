@@ -2,7 +2,7 @@
     const allServicesData= {
         title: 'Наши работы, на которых мы специализируемся',
         buttonTitle: 'Все услуги',
-        buttonPath: '#all-services',
+        buttonAnchor: '#all-services',
         content: [
             {
                 imageSrc: '../assets/images/team-work.png',
@@ -39,7 +39,7 @@ section#news.all-services
     .all-services__container
         article.all-services__text-wrap
             h2.all-services__title.title= allServicesData.title
-            a.all-services__button.button(href=allServicesData.buttonPath) #{ allServicesData.buttonTitle }
+            a.all-services__button.button(href=allServicesData.buttonAnchor) #{ allServicesData.buttonTitle }
         ul.all-services__content 
             each item in allServicesData.content 
                 li.all-services__item
