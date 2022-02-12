@@ -32,3 +32,32 @@
         margin-right: 30px;
     }
 }
+
+@media (max-width: 991px) {
+    .all-projects {
+        padding: 50px 0 70px;
+        &__text-wrap {
+            margin-bottom: 40px;
+        }
+        &__title {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .all-projects {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin: 0 0 20px;
+            }
+        }
+        &__image {
+            max-width: 200px;
+        }
+    }
+}
