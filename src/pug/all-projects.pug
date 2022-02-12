@@ -21,7 +21,7 @@
            }, 
         ],
         buttonTitle: 'Все проекты',
-        buttonPath: '#all-projects',
+        buttonAnchor: '#all-projects',
     };
 
 
@@ -33,5 +33,5 @@ section.all-projects
         ul.all-projects__content 
             each item in projectsData.images 
                 li.all-projects__item
-                    img.all-projects__img(src=item.imgSrc, alt=item.altImg)
-        a.all-projects__button.button(href=projectsData.buttonPath) #{ projectsData.buttonTitle }
+                    img.all-projects__image(src=item.imgSrc, alt=item.altImg)
+        a.all-projects__button.button(href=projectsData.buttonAnchor) #{ projectsData.buttonTitle }
