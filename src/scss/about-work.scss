@@ -28,8 +28,8 @@
         color: $white;
     }
     &__video {
-        width: 970px;
-        height: 430px;
+        max-width: 970px;
+        width: 100%;
         margin: 0 auto;
     }
     &__subscription {
@@ -81,5 +81,33 @@
         text-align: center;
 
         color: $grey;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-work {
+        padding: 50px 0 60px;
+        background-size: auto 35%;
+        &__content {
+            padding-bottom: 50px;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__subscription {
+            padding-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .about-work {
+        &__input {
+            padding: 8px 10px;
+            font-size: 10px;
+        }
     }
 }
